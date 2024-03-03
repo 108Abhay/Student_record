@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of persons</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa; /* Light gray background */
+            margin: 0;
+            padding: 0;
+        }
+
+        h2, h3, h4 {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        hr {
+            border: 0;
+            height: 5px;
+            background-color: #28a745; /* Green color */
+        }
+
+        table {
+            width: 90%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: #fff;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 2px solid #ffc107; /* Yellow color */
+        }
+
+        th {
+            background-color: #007bff; /* Blue color */
+            color: #fff;
+        }
+
+        .myTable1 th {
+            background-color: #28a745; /* Green color */
+            color: #fff;
+        }
+
+        .myTable1 td {
+            background-color: #fff; /* White color */
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+<h2>WELCOME TO</h2>
+<h3><font color="red">Developed Under the Guidance of Dr. Balaji Shetty sir.</font></h3>
+<hr>
+
+<h4><b><i>SUMMARY EACH USER</i></b></h4>
+
+<table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <th>USER NAMES</th>
+        <th>Student Name</th>
+        <th>City</th>
+        <th>Address</th>
+        <th>Branch</th>
+        <th>Education</th>
+        <th>Experience</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for entry in stud12 %}
+    <tr>
+        <td>{{ entry.user }}</td>
+        <td>{{ entry.student_name }}</td>
+        <td>{{ entry.city }}</td>
+        <td>{{ entry.address }}</td>
+        <td>{{ entry.branch }}</td>
+        <td>{{ entry.education }}</td>
+        <td>{{ entry.experience }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<hr>
+
+<table class="table table-bordered myTable1">
+    <thead>
+    <tr>
+        <th>City Name</th>
+        <th>Country</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for entry1 in city12 %}
+    <tr>
+        <td>{{ entry1.city_name }}</td>
+        <td>{{ entry1.country }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+</body>
+</html>
